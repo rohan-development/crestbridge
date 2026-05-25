@@ -16,21 +16,21 @@ CrestronIP="YOURIP"
 Port="YOURPORT"
 Password="YOUR-PASSWORD"
 
-[[Devices]]     #1 device, add one of these sections for each device
-Name="Island"   #Name for MQTT channel
-Room="Kitchen"  #Room for MQTT channel
-ID=12           #ID. Used to update states
-Up=514          #ID of the digital join to increase value
-Down=515        #ID of the digital join to decrease value
-Type="analog"   #Type can be analog or digital (ie dimmer vs fan)
+[[Devices]]     #1 device, add one of these sections for each device  
+Name="Island"   #Name for MQTT channel  
+Room="Kitchen"  #Room for MQTT channel  
+ID=12           #ID. Used to update states  
+Up=514          #ID of the digital join to increase value  
+Down=515        #ID of the digital join to decrease value  
+Type="analog"   #Type can be analog or digital (ie dimmer vs fan)  
 
-[[Devices]]
-Name="Amp"
-Room="Kitchen"
-ID=20                   #ID for state tracking
-CTRLON=[15,30,31,13]    #Sequence of digital joins to turn on the element
-CTRLOFF=[30,31,26]      #Sequence of digital joins to turn off the element
-Type="digital"
-StateString="Apple TV"  #String which reflects device being in "on" state
+[[Devices]]  
+Name="Amp"  
+Room="Kitchen"  
+ID=20                   #ID for state tracking  
+CTRLON=[15,30,31,13]    #Sequence of digital joins to turn on the element  
+CTRLOFF=[30,31,26]      #Sequence of digital joins to turn off the element  
+Type="digital"  
+StateString="Apple TV"  #String which reflects device being in "on" state  
 
 You can find this specific information by placing a device between your touch panel/control app and processor and seeing what happens/what IDs are activated when specific devices are turned on/off.
